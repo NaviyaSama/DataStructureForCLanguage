@@ -17,12 +17,13 @@ Node *initList()
     return head;
 }
 
-void insertHead(Node *L, ElemType e)
+int insertHead(Node *L, ElemType e)
 {
     Node *p = (Node *)malloc(sizeof(Node));
     p->data = e;
     p->next = L->next;
     L->next = p;
+    return 1;
 }
 
 int main()
