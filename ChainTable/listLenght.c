@@ -107,7 +107,7 @@ int listLenght(Node *L)
 {
     Node *p = L;
     int len = 0;
-    while (p != NULL)
+    while (p->next != NULL)
     {
         p = p->next;
         len++;
