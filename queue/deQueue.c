@@ -29,6 +29,18 @@ int isEmpty(Queue *q)
     }
 }
 
+ElemType deQueue(Queue *q)
+{
+    if (q->front == q->rear)
+    {
+        printf("空的\n");
+        return 0;
+    }
+    ElemType e = q->data[q->front];
+    q->front++;
+    return e;
+}
+
 int main()
 {
     Queue q;
